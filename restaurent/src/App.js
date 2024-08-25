@@ -1,10 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import NavbarStatus from './component /Layout/NavbarStatus';
+
 
 function App() {
   return (
     <div className="App">
-      hey bro how are you
+      <NavbarStatus/>
     </div>
   );
 }
