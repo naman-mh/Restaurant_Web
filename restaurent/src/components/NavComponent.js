@@ -8,12 +8,12 @@ const NavComponent = () => {
     <AppBar
       position="sticky"
       sx={{
-        backgroundColor: '#3d3d3d',
+        backgroundColor: 'white',
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
         padding: "0 40px ",
-        height: "7vh",
+        height: "10vh",
         flexDirection:"row"
         
       }}
@@ -24,7 +24,7 @@ const NavComponent = () => {
           alignItems: "center",
           justifyContent: "space-between",
           gap: "5px",
-          color:"#919191"
+          color:"black"
         }}
       >
         <RestaurantIcon />
@@ -52,19 +52,19 @@ const NavComponent = () => {
         >
           Contact
         </Button>
-        <Button LinkComponent={Link} to="/login"
+        <Button LinkComponent={Link} to="/reservation"
           sx={{
             color: "#919191",
           }}
         >
-          Login
+          Reservation
         </Button>
-        <Button LinkComponent={Link} to="/signUp"
+        <Button LinkComponent={Link} to="/menu"
           sx={{
             color: "#919191",
           }}
         >
-          SignUp
+          Menu
         </Button>
       </Box>
     </AppBar>
