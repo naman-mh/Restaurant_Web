@@ -1,73 +1,53 @@
-import { AppBar, Box, Button, Typography } from "@mui/material";
+import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
 import React from "react";
-import RestaurantIcon from "@mui/icons-material/Restaurant";
 import { Link } from "react-router-dom";
+import FastfoodIcon from "@mui/icons-material/Fastfood";
 
 const NavComponent = () => {
   return (
-    <AppBar
-      position="sticky"
-      sx={{
-        backgroundColor: 'white',
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        padding: "0 40px ",
-        height: "10vh",
-        flexDirection:"row"
-        
-      }}
-    >
-      <Box
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          gap: "5px",
-          color:"black"
-        }}
-      >
-        <RestaurantIcon />
-        <Typography>My Restaurant</Typography>
-      </Box>
+    <>
       <Box>
-        <Button LinkComponent={Link} to="/"
-          sx={{
-            color: "#919191",
-          }}
-        >
-          home
-        </Button>
-        <Button LinkComponent={Link} to="/about"
-          sx={{
-            color: "#919191",
-          }}
-        >
-          About
-        </Button>
-        <Button LinkComponent={Link} to="/contact"
-          sx={{
-            color: "#919191",
-          }}
-        >
-          Contact
-        </Button>
-        <Button LinkComponent={Link} to="/reservation"
-          sx={{
-            color: "#919191",
-          }}
-        >
-          Reservation
-        </Button>
-        <Button LinkComponent={Link} to="/menu"
-          sx={{
-            color: "#919191",
-          }}
-        >
-          Menu
-        </Button>
+        <AppBar component={"nav"} sx={{ bgcolor: "black" ,position:"sticky"}}>
+          <Toolbar>
+            <Typography
+              variant="h5"
+              component="div"
+              sx={{
+                color: "goldenrod",
+                flexGrow: 1,
+              }}
+            >
+              <FastfoodIcon />
+              My Restaurant
+            </Typography>
+            <Box sx={ {
+              
+              
+            }}>
+            <ul>
+              <li>
+                <Link to={"/"}>HOME</Link>
+              </li>
+              <li>
+                <Link to={"/about"}>ABOUT</Link>
+              </li>
+              <li>
+                <Link to={"/menu"}>MENU</Link>
+              </li>
+              <li>
+                <Link to={"/reservation"}>RESERVATION</Link>
+              </li>
+              <li>
+                <Link to={"/contact"}>CONTACT</Link>
+              </li>
+              
+         </ul>
+            </Box>
+          </Toolbar>
+              
+        </AppBar>
       </Box>
-    </AppBar>
+    </>
   );
 };
 
