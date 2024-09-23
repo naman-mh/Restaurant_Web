@@ -1,7 +1,9 @@
-import { AppBar, Box,  Toolbar, Typography } from "@mui/material";
+import { AppBar, Box,  IconButton,  Toolbar, Typography } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 import FastfoodIcon from "@mui/icons-material/Fastfood";
+import MenuIcon from '@mui/icons-material/Menu';
+
 
 const NavComponent = () => {
   return (
@@ -9,6 +11,9 @@ const NavComponent = () => {
       <Box>
         <AppBar component={"nav"} sx={{ bgcolor: "black", position:{sm:"block", xs:"block"}  }}>
           <Toolbar>
+            <IconButton color="inherit" aria-label="open drawer" edge="start" sx={{m:2 , display:{sm:"none"}}}>
+                <MenuIcon/>
+            </IconButton>
             <Typography
               variant="h5"
               component="div"
@@ -22,23 +27,30 @@ const NavComponent = () => {
             </Typography>
             <Box sx={ {
               
+              display:{xs:"none", sm:"block"}
               
             }}>
-            <ul>
-              <li>
-                <Link to={"/"}>HOME</Link>
+            <ul style={{
+              
+              display:"flex",
+              alignItems:"center",
+              justifyContent:"space-between",
+              gap:"20px"
+            }}>
+              <li style={{listStyle:'none'}}>
+                <Link to={"/"} style={{textDecoration:"none", color:"white"}}>HOME</Link>
               </li>
-              <li>
-                <Link to={"/about"}>ABOUT</Link>
+              <li style={{listStyle:'none'}}>
+                <Link to={"/about"} style={{textDecoration:"none", color:"white"}}>ABOUT</Link>
               </li>
-              <li>
-                <Link to={"/menu"}>MENU</Link>
+              <li style={{listStyle:'none'}}>
+                <Link to={"/menu"} style={{textDecoration:"none", color:"white"}}>MENU</Link>
               </li>
-              <li>
-                <Link to={"/reservation"}>RESERVATION</Link>
+              <li style={{listStyle:'none'}}>
+                <Link to={"/reservation"} style={{textDecoration:"none", color:"white"}}>RESERVATION</Link>
               </li>
-              <li>
-                <Link to={"/contact"}>CONTACT</Link>
+              <li style={{listStyle:'none'}}>
+                <Link to={"/contact"} style={{textDecoration:"none", color:"white"}}>CONTACT</Link>
               </li>
               
          </ul>
