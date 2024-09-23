@@ -1,4 +1,4 @@
-import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
+import { AppBar, Box,  Toolbar, Typography } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 import FastfoodIcon from "@mui/icons-material/Fastfood";
@@ -7,7 +7,7 @@ const NavComponent = () => {
   return (
     <>
       <Box>
-        <AppBar component={"nav"} sx={{ bgcolor: "black" ,position:"sticky"}}>
+        <AppBar component={"nav"} sx={{ bgcolor: "black", position:{sm:"block", xs:"block"}  }}>
           <Toolbar>
             <Typography
               variant="h5"

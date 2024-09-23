@@ -20,8 +20,8 @@ function About() {
       <Box mt={"20px"}>
         <Grid2 container columnSpacing={4}>
           <Grid2 size={{sm : 12, md:6}}>
-            <Box>
-              <img src="https://technext.github.io/Osteriax/assets/img/about-us.png" />
+            <Box sx={{}}>
+              <img style={{objectFit:"contain"}} src="https://technext.github.io/Osteriax/assets/img/about-us.png" />
             </Box>
           </Grid2>
           <Grid2 size={{sm : 12, md:6}}>

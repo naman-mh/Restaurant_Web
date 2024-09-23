@@ -1,12 +1,13 @@
+import { Box, Typography } from '@mui/material'
 import React from 'react'
 
 const CardComp = () => {
   return (
-    <div>
-        <h1>lvsvksneafasncdnvsjefncjzdvfnjfendcjfnvjdcnzvfnfovndzdnvdf
-            vdvkzdfncjdcnzdjnc dzjfvdfnz vdjkv njfdv dfvdz
-        </h1>
-    </div>
+    <Box>
+      <Typography>
+        Card Comp
+      </Typography>
+    </Box>
   )
 }
 
