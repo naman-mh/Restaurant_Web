@@ -8,7 +8,7 @@ function App() {
   return (
     <Box>
       
-      <NavComponent/>
+      
         <Routes>
           <Route path="/" element={<LandingPage/>}/>
         </Routes>
