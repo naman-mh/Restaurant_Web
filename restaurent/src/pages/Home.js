@@ -44,8 +44,8 @@ const Home = () => {
           <Button variant="contained"
         color="primary"
         sx={{
-          position: 'absolute',
-          top: '50%',
+          zIndex:999,
+          top: '-200px',
           left: '50%',
           transform: 'translate(-50%, -50%)',
           bgcolor:"blue"
