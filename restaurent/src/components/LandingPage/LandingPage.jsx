@@ -4,6 +4,7 @@ import CardComp from "../CardComp";
 import About from "../../pages/About";
 import Contact from "../../pages/Contact";
 import NavComponent from "../NavComponent";
+import Reservation from "../../pages/Reservation"
 
 const LandingPage = () => {
   return (
@@ -15,6 +16,7 @@ const LandingPage = () => {
       <div>
         <Contact />
       </div>
+      <Reservation/>
     </div>
   );
 };

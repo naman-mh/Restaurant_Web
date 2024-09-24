@@ -83,7 +83,7 @@ const NavComponent = () => {
       <Box>
         <AppBar
           component={"nav"}
-          sx={{ bgcolor: "black", position:{sm:"block", xs:"block"} }}
+          sx={{ bgcolor: "black", position:"sticky" }}
         >
           <Toolbar>
             <IconButton
