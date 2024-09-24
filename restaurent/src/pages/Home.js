@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import img1 from "../Assets/image2.jpeg";
-import { Button, Box } from "@mui/material";
+import { Button, Box, Typography } from "@mui/material";
 const Home = () => {
   return (
     <>
@@ -26,6 +26,9 @@ const Home = () => {
         >
           
           <SwiperSlide>
+            <span style={{fontFamily:"cursive", color:"#FFA500"}}>
+              Welcome
+            </span>
             <img src={img1} height={"420px"} width={"100%"}></img>
           </SwiperSlide>
           <SwiperSlide>
