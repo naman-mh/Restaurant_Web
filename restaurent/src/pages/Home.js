@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -26,10 +27,9 @@ const Home = () => {
         >
           
           <SwiperSlide>
-            <span style={{fontFamily:"cursive", color:"#FFA500"}}>
-              Welcome
-            </span>
+            
             <img src={img1} height={"420px"} width={"100%"}></img>
+            
           </SwiperSlide>
           <SwiperSlide>
             <img src={img1} height={"420px"} width={"100%"}></img>
@@ -41,6 +41,7 @@ const Home = () => {
             <img src={img1} height={"420px"} width={"100%"}></img>
           </SwiperSlide>
         </Swiper>
+        <Box>hi hello</Box>
           <Button variant="contained"
         color="primary"
         sx={{
@@ -56,5 +57,4 @@ const Home = () => {
     </>
   );
 };
-
 export default Home;

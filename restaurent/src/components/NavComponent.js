@@ -1,6 +1,7 @@
 import { AppBar, Box, Divider, Drawer, IconButton, Toolbar, Typography } from "@mui/material";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+
 import FastfoodIcon from "@mui/icons-material/Fastfood";
 import MenuIcon from "@mui/icons-material/Menu";
 
@@ -184,7 +185,6 @@ const NavComponent = () => {
         </Box>
       </Box>
     </>
-  );
-};
-
+  )
+}
 export default NavComponent;

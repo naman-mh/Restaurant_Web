@@ -9,6 +9,7 @@ import Reservation from "../../pages/Reservation"
 const LandingPage = () => {
   return (
     <div>
+
       <NavComponent/>
       <Home />
       <CardComp />
@@ -17,6 +18,9 @@ const LandingPage = () => {
         <Contact />
       </div>
       <Reservation/>
+
+        
+
     </div>
   );
 };
