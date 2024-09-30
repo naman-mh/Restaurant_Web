@@ -1,6 +1,17 @@
-import { AppBar, Box, Divider, Drawer, IconButton, Toolbar, Typography } from "@mui/material";
+import {
+  AppBar,
+  Box,
+  colors,
+  Divider,
+  Drawer,
+  IconButton,
+  Toolbar,
+  Typography,
+} from "@mui/material";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
 
 import FastfoodIcon from "@mui/icons-material/Fastfood";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -15,68 +26,63 @@ const NavComponent = () => {
 
   //menu drawer
   const drawer = (
-    <Box onClick={handleToggler} sx={{ textAlign: "center",  }}>
-        <Typography
-              variant="h5"
-              component="div"
-              sx={{ 
-                color: "goldenrod",
-                flexGrow: 1,
-              }}
-            >
-              <FastfoodIcon />
-              My Restaurant
-            </Typography>
-         <Divider/>   
-        <ul
-          style={{
-            
-            display: "flex",
-            alignItems: "center",
-            flexDirection:"column",
-            gap: "20px",
-            marginTop:"30px"
-          }}
-        >
-          <li style={{ listStyle: "none" }}>
-            <Link to={"/"} style={{ textDecoration: "none", color:"black" }}>
-              HOME
-            </Link>
-          </li>
-          <li style={{ listStyle: "none" }}>
-            <Link
-              to={"/about"}
-              style={{ textDecoration: "none",color:"black" }}
-            >
-              ABOUT
-            </Link>
-          </li>
-          <li style={{ listStyle: "none" }}>
-            <Link
-              to={"/menu"}
-              style={{ textDecoration: "none", color:"black" }}
-            >
-              MENU
-            </Link>
-          </li>
-          <li style={{ listStyle: "none" }}>
-            <Link
-              to={"/reservation"}
-              style={{ textDecoration: "none", color:"black" }}
-            >
-              RESERVATION
-            </Link>
-          </li>
-          <li style={{ listStyle: "none" }}>
-            <Link
-              to={"/contact"}
-              style={{ textDecoration: "none",color:"black" }}
-            >
-              CONTACT
-            </Link>
-          </li>
-        </ul>
-      
+    <Box onClick={handleToggler} sx={{ textAlign: "center" }}>
+      <Typography
+        variant="h5"
+        component="div"
+        sx={{
+          color: "#FFA500",
+          flexGrow: 1,
+        }}
+      >
+        <FastfoodIcon />
+        My Restaurant
+      </Typography>
+      <Divider />
+      <List
+        style={{
+          display: "flex",
+          alignItems: "center",
+          flexDirection: "column",
+          gap: "20px",
+          marginTop: "30px",
+        }}
+      >
+        <ListItem style={{ listStyle: "none" }}>
+          <Link to={"/"} style={{ textDecoration: "none", color: "black" }}>
+            HOME
+          </Link>
+        </ListItem>
+        <ListItem style={{ listStyle: "none" }}>
+          <Link
+            to={"/about"}
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            ABOUT
+          </Link>
+        </ListItem>
+        <ListItem style={{ listStyle: "none" }}>
+          <Link to={"/menu"} style={{ textDecoration: "none", color: "black" }}>
+            MENU
+          </Link>
+        </ListItem>
+        <ListItem style={{ listStyle: "none" }}>
+          <Link
+            to={"/reservation"}
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            RESERVATION
+          </Link>
+        </ListItem>
+        <ListItem style={{ listStyle: "none" }}>
+          <Link
+            to={"/contact"}
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            CONTACT
+          </Link>
+        </ListItem>
+      </List>
     </Box>
   );
   return (
@@ -84,7 +90,7 @@ const NavComponent = () => {
       <Box>
         <AppBar
           component={"nav"}
-          sx={{ bgcolor: "black", position:"block", height:"9vh"}}
+          sx={{ bgcolor: "white", position: "block", height: "9vh" }}
         >
           <Toolbar>
             <IconButton
@@ -94,13 +100,13 @@ const NavComponent = () => {
               edge="start"
               sx={{ m: 2, display: { sm: "none" } }}
             >
-              <MenuIcon  />
+              <MenuIcon />
             </IconButton>
-           <Typography
+            <Typography
               variant="h5"
               component="div"
-              sx={{ 
-                color: "goldenrod",
+              sx={{
+                color: "#FFA500",
                 flexGrow: 1,
               }}
             >
@@ -110,10 +116,9 @@ const NavComponent = () => {
             <Box
               sx={{
                 display: { xs: "none", sm: "block" },
-                
               }}
             >
-              <ul
+              <List
                 style={{
                   display: "flex",
                   alignItems: "center",
@@ -121,70 +126,89 @@ const NavComponent = () => {
                   gap: "20px",
                 }}
               >
-                <li style={{ listStyle: "none" }}>
-                  <Link
-                    to={"/"}
-                    style={{ textDecoration: "none", color: "white" }}
-                  >
-                    HOME
-                  </Link>
-                </li>
-                <li style={{ listStyle: "none" }}>
-                  <Link
-                    to={"/about"}
-                    style={{ textDecoration: "none", color: "white" }}
-                  >
-                    ABOUT
-                  </Link>
-                </li>
-                <li style={{ listStyle: "none" }}>
-                  <Link
-                    to={"/menu"}
-                    style={{ textDecoration: "none", color: "white" }}
-                  >
-                    MENU
-                  </Link>
-                </li>
-                <li style={{ listStyle: "none" }}>
-                  <Link
-                    to={"/reservation"}
-                    style={{ textDecoration: "none", color: "white" }}
-                  >
+                <ListItem
+                Link={Link}
+                to="/"
+                  sx={{
+                    listStyle: "none",
+                    color: "black",
+                    textDecoration: "none",
+                    "&:hover": { color: "#FFA500" },
+                    cursor:"pointer"
+                  }}
+                >
+                  HOME
+                </ListItem>
+                <ListItem 
+                Link={Link}
+                  to="/about"
+                  sx={{
+                    listStyle: "none",
+                    color: "black",
+                    textDecoration: "none",
+                    "&:hover": { color: "#FFA500" },
+                    cursor:"pointer"
+                  }}>
+                  
+                 ABOUT
+                </ListItem>
+                <ListItem 
+                Link={Link}
+                  to="/menu"
+                  sx={{
+                    listStyle: "none",
+                    color: "black",
+                    textDecoration: "none",
+                    "&:hover": { color: "#FFA500" },
+                    cursor:"pointer"
+                  }}
+                >
+                  MENU
+                </ListItem>
+                <ListItem Link={Link}
+                  to="/reservation"
+                  sx={{
+                    listStyle: "none",
+                    color: "black",
+                    textDecoration: "none",
+                    "&:hover": { color: "#FFA500" },
+                    cursor:"pointer"
+                  }}>
                     RESERVATION
-                  </Link>
-                </li>
-                <li style={{ listStyle: "none" }}>
-                  <Link
-                    to={"/contact"}
-                    style={{ textDecoration: "none", color: "white" }}
-                  >
+                </ListItem>
+                <ListItem Link={Link}
+                  to="/contact"
+                  sx={{
+                    listStyle: "none",
+                    color: "black",
+                    textDecoration: "none",
+                    "&:hover": { color: "#FFA500" },
+                    cursor:"pointer"
+                  }}>
                     CONTACT
-                  </Link>
-                </li>
-              </ul>
+                </ListItem>
+              </List>
             </Box>
           </Toolbar>
         </AppBar>
         <Box component={"nav"}>
-          <Drawer 
-          variant="temporary" 
-          open={mobileOpen} 
-          onClose={handleToggler}
-
-          sx={{
-            display:{sm:"block", sm:"none"},
-            "& .MuiDrawer-paper":{
-              boxSizing:"border-box",
-              width:"240px",
-
-            }
-          }}>
+          <Drawer
+            variant="temporary"
+            open={mobileOpen}
+            onClose={handleToggler}
+            sx={{
+              display: { sm: "block", sm: "none" },
+              "& .MuiDrawer-paper": {
+                boxSizing: "border-box",
+                width: "240px",
+              },
+            }}
+          >
             {drawer}
           </Drawer>
-
         </Box>
       </Box>
     </>
-  )
-}
+  );
+};
 export default NavComponent;

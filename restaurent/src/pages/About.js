@@ -43,13 +43,27 @@ function About() {
               
           </Grid2>
           <Grid2 size={{sm : 12, md:6}}>
-            <Typography variant="h5">
+            <Typography variant="h5" sx={{
+              mb:"20px"
+            }}>
                   The beginning
             </Typography>
             <p>
             The Rajha opened its doors in 1998 for the first visitors. We have introduced to you the warm, full flavors of contemporary Indian cuisine.
 
             </p>
+            <p>We were the first who show personally handpicked herbs and spices and foods to you.</p>
+            <Box sx={{
+                backgroundImage:`url(${img1})`,
+                height: {xs:"260px" , sm:"460px"},
+                // width:{xs:"360px" , sm: '460px'},
+                backgroundSize: "100% 100%",
+                objectFit: "fill",
+                backgroundRepeat: "no-repeat",
+                border:"2px solid black"
+                
+                }}>
+                  </Box>
           </Grid2>
         </Grid2>
       </Box>
