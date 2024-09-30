@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Grid2, Typography } from "@mui/material";
+import img1 from "../Assets/image1.jpeg"
 
 function About() {
   return (
@@ -19,44 +20,35 @@ function About() {
       </Box>
       <Box mt={"20px"}>
         <Grid2 container columnSpacing={4}>
-          <Grid2 size={{sm : 12, md:6}}>
-            <Box sx={{}}>
-              {/* <img style={{objectFit:"contain"}} src="https://technext.github.io/Osteriax/assets/img/about-us.png" /> */}
+          <Grid2 size={{ xs:12,sm : 12, md:6}}>
+            <Box sx={{
+              display:{xs:"500px" , sm:"600px"},
+              padding:"30px",
+              border:"1px solid red"
+            }}>
+            <Box sx={{
+                backgroundImage:`url(${img1})`,
+                height: {xs:"260px" , sm:"460px"},
+                // width:{xs:"360px" , sm: '460px'},
+                backgroundSize: "100% 100%",
+                objectFit: "fill",
+                backgroundRepeat: "no-repeat",
+                border:"2px solid black"
+                
+                }}>
+               
             </Box>
+            </Box>
+          
+              
           </Grid2>
           <Grid2 size={{sm : 12, md:6}}>
+            <Typography variant="h5">
+                  The beginning
+            </Typography>
             <p>
-              lorevnfdvjaenfaejncsjanregeanfoasnvrejgnSDjonzfgjae nfjds vfd bfnv
-              sdcnjfgnsjrg fdsjv bdzfv arj dvjz dvj vjsd cvzfv cnjdfvdcj svj
-              dcjd variantc dcj dcjc dcj v dvj zdvj zdvj vs dv zdjvzdsv fc vzdv
-              vdv 'dvdv sdvs dvvzdkvs vjc bzdjf '
-            </p>
-            
-            <ul>
-              <li>
-                1
-              </li>
-              <li>
-                1
-              </li>
-              <li>
-                1
-              </li>
-              <li>
-                1
-              </li>
-              <li>
-                1
-              </li>
-              <li>
-                1
-              </li>
-              </ul>
-              <p>
-            lorevnfdvjaenfaejncsjanregeanfoasnvrejgnSDjonzfgjae nfjds vfd bfnv
-              sdcnjfgnsjrg fdsjv bdzfv arj dvjz dvj vjsd cvzfv cnjdfvdcj svj
-              dcjd variantc dcj dcjc dcj v dvj zdvj zdvj vs dv zdjvzdsv fc vzdv
-              vdv 'dvdv sdvs dvvzdkvs vjc bzdjf '
+            The Rajha opened its doors in 1998 for the first visitors. We have introduced to you the warm, full flavors of contemporary Indian cuisine.
+
             </p>
           </Grid2>
         </Grid2>

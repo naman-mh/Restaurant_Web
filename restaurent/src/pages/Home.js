@@ -10,7 +10,7 @@ import { Button, Box, Typography } from "@mui/material";
 const Home = () => {
   return (
     <>
-      <Box style={{ position: "relative" ,height:"50vh" }}>
+      <Box style={{ position: "relative",  }}>
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
@@ -30,7 +30,7 @@ const Home = () => {
               sx={{
                 backgroundImage: `url(${img1})`,
                 width: "100vw",
-                height: "420px",
+                height: {xs:"240px" , sm:"600px"},
                 backgroundSize: "100% 100%",
                 objectFit: "fill",
                 backgroundRepeat: "no-repeat",
@@ -43,15 +43,30 @@ const Home = () => {
                 sx={{
                   color: "#FFA500",
                   fontFamily: "tangerine ",
-                  paddingTop: "60px",
+                  paddingTop: "90px",
                   fontWeight: 400,
-                  fontSize: "100px",
-                  
+                  fontSize: {xs:"50px" , sm:"100px"},
                 }}
               >
                 Welcome
               </Typography>
-              <Typography  variant="h3"sx={{  fontWeight: 600, color:"white", fontSize:'50px' }}>To The My Restaurant </Typography>
+              <Typography
+                variant="h3"
+                sx={{ fontWeight: 600, color: "white", fontSize: {xs:"15px", sm:"50px"} }}
+              >
+                To The My Restaurant{" "}
+              </Typography>
+              <Box sx={{
+                display:{
+                  sm:"block",
+                  xs:"none"
+                }
+              }}>
+              <p style={{ textWrap: "wrap", color: "white" ,  }}>
+                fjsdfewbfawefbdubagjbavjvb vnvdnvs nvdbvbva buboeavbeb
+                bvbvabvabvv vubrvbverbvefb ubvdbvbvaj bubbfabrbreg{" "}
+              </p>
+              </Box>
             </Box>
           </SwiperSlide>
           <SwiperSlide>
@@ -59,14 +74,44 @@ const Home = () => {
               sx={{
                 backgroundImage: `url(${img1})`,
                 width: "100vw",
-                height: "420px",
+                height: {xs:"240px" , sm:"600px"},
                 backgroundSize: "100% 100%",
                 objectFit: "fill",
                 backgroundRepeat: "no-repeat",
+                textAlign: "center",
+                textWrap:"wrap"
               }}
             >
-              <Typography>ha bhai </Typography>
-              <Typography>well done </Typography>
+              <Typography
+                variant="h3"
+                sx={{
+                  color: "#FFA500",
+                  fontFamily: "tangerine ",
+                  paddingTop: "90px",
+                  fontWeight: 400,
+                  fontSize: {xs:"50px" , sm:"100px"},
+                }}
+              >
+                The Elegant 
+              </Typography>
+              <Typography
+                variant="h3"
+                sx={{ fontWeight: 600, color: "white", fontSize: {xs:"15px", sm:"50px"}, textWrap:"wrap" }}
+              >
+                Italian Restaurant
+              </Typography>
+              <Box sx={{
+                display:{
+                  sm:"block",
+                  xs:"none"
+                }
+              }}>
+              <p style={{ textWrap: "wrap", color: "white" ,  }}>
+                fjsdfewbfawefbdubagjbavjvb vnvdnvs nvdbvbva buboeavbeb
+                bvbvabvabvv vubrvbverbvefb ubvdbvbvaj bubbfabrbreg{" "}
+              </p>
+              </Box>
+              
             </Box>
           </SwiperSlide>
           <SwiperSlide>
@@ -74,24 +119,52 @@ const Home = () => {
               sx={{
                 backgroundImage: `url(${img1})`,
                 width: "100vw",
-                height: "420px",
+                height: {xs:"240px" , sm:"600px"},
                 backgroundSize: "100% 100%",
                 objectFit: "fill",
                 backgroundRepeat: "no-repeat",
+                textAlign: "center",
               }}
             >
-              <Typography>ha bhai </Typography>
-              <Typography>well done </Typography>
+              <Typography
+                variant="h3"
+                sx={{
+                  color: "#FFA500",
+                  fontFamily: "tangerine ",
+                  paddingTop: "90px",
+                  fontWeight: 400,
+                  fontSize: {xs:"50px" , sm:"100px"},
+                }}
+              >
+                Delicious
+              </Typography>
+              <Typography
+                variant="h3"
+                sx={{ fontWeight: 600, color: "white", fontSize: {xs:"15px", sm:"50px"} }}
+              >
+                Spicy Masalas
+              </Typography>
+              <Box sx={{
+                display:{
+                  sm:"block",
+                  xs:"none"
+                }
+              }}>
+              <p style={{ textWrap: "wrap", color: "white" ,  }}>
+                fjsdfewbfawefbdubagjbavjvb vnvdnvs nvdbvbva buboeavbeb
+                bvbvabvabvv vubrvbverbvefb ubvdbvbvaj bubbfabrbreg{" "}
+              </p>
+              </Box>
             </Box>
           </SwiperSlide>
         </Swiper>
-        <Box>hi hello</Box>
+        
         <Button
           variant="contained"
           color="primary"
           sx={{
             zIndex: 999,
-            top: "-120px",
+            top: "-100px",
             left: "50%",
             transform: "translate(-50%, -50%)",
             bgcolor: "white",
@@ -100,6 +173,10 @@ const Home = () => {
               bgcolor: "#FFA500",
               color: "white",
             },
+            display:{
+              xs:"none",
+              sm:"block"
+            }
           }}
         >
           Book A Table{" "}
