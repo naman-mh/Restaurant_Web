@@ -119,7 +119,7 @@ const NavComponent = () => {
               }}
             >
               <List
-                style={{
+                sx={{
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
@@ -127,65 +127,69 @@ const NavComponent = () => {
                 }}
               >
                 <ListItem
-                Link={Link}
-                to="/"
+                  Link={Link}
+                  to="/"
                   sx={{
                     listStyle: "none",
                     color: "black",
                     textDecoration: "none",
                     "&:hover": { color: "#FFA500" },
-                    cursor:"pointer"
+                    cursor: "pointer",
                   }}
                 >
                   HOME
                 </ListItem>
-                <ListItem 
-                Link={Link}
+                <ListItem
+                  Link={Link}
                   to="/about"
                   sx={{
                     listStyle: "none",
                     color: "black",
                     textDecoration: "none",
                     "&:hover": { color: "#FFA500" },
-                    cursor:"pointer"
-                  }}>
-                  
-                 ABOUT
+                    cursor: "pointer",
+                  }}
+                >
+                  ABOUT
                 </ListItem>
-                <ListItem 
-                Link={Link}
+                <ListItem
+                  Link={Link}
                   to="/menu"
                   sx={{
                     listStyle: "none",
                     color: "black",
                     textDecoration: "none",
                     "&:hover": { color: "#FFA500" },
-                    cursor:"pointer"
+                    cursor: "pointer",
                   }}
                 >
                   MENU
                 </ListItem>
-                <ListItem Link={Link}
+                <ListItem
+                  Link={Link}
                   to="/reservation"
                   sx={{
                     listStyle: "none",
                     color: "black",
                     textDecoration: "none",
                     "&:hover": { color: "#FFA500" },
-                    cursor:"pointer"
-                  }}>
-                    RESERVATION
+                    cursor: "pointer",
+                  }}
+                >
+                  RESERVATION
                 </ListItem>
-                <ListItem Link={Link}
+                <ListItem
+                  Link={Link}
                   to="/contact"
                   sx={{
                     listStyle: "none",
                     color: "black",
                     textDecoration: "none",
                     "&:hover": { color: "#FFA500" },
-                    cursor:"pointer"
-                  }}>
-                    CONTACT
+                    cursor: "pointer",
+                  }}
+                >
+                  CONTACT
                 </ListItem>
               </List>
             </Box>
