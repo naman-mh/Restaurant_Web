@@ -98,7 +98,7 @@ const NavComponent = () => {
               color="inherit"
               aria-label="open drawer"
               edge="start"
-              sx={{ m: 2, display: { sm: "none" } }}
+              sx={{ m: 2, display: { sm: "none" } , color:"black" }}
             >
               <MenuIcon />
             </IconButton>
